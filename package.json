@@ -1,0 +1,46 @@
+{
+	"name": "",
+	"version": "0.0.0",
+	"author": "",
+	"license": "MIT",
+	"repository": "",
+	"description": "",
+	"keywords": [],
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=12"
+	},
+	"engineStrict": true,
+	"scripts": {
+		"start": "ts-node src/index.ts",
+		"dev": "ts-node-dev --respawn --no-notify src/index.ts",
+		"build": "rimraf dist && tsc -p tsconfig.build.json",
+		"prepublishOnly": "yarn build",
+		"release": "standard-version",
+		"release:first": "standard-version --first-release",
+		"test": "jest",
+		"test:watch": "jest --watch --verbose false"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"@types/jest": "^25.2.3",
+		"@types/node": "^12",
+		"husky": "^4.2.5",
+		"jest": "^26.0.1",
+		"rimraf": "^3.0.2",
+		"standard-version": "^8.0.0",
+		"ts-jest": "^26.0.0",
+		"ts-node": "^8.10.1",
+		"ts-node-dev": "^1.0.0-pre.44",
+		"tslint": "^6.1.2",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.9.3",
+		"typescript-tslint-plugin": "^0.5.5"
+	}
+}
